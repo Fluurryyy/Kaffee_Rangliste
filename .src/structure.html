@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kaffee Rangliste</title>
+        <meta name="description" content="Die Rangliste für die Kaffee Striche in der Verwaltung">
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="script" href="script.js">
+    </head>
+    <body>
+        <h1>Kaffee Rangliste</h1>
+        <div class="introduction">
+            <h2><button>info button</button>Wie funktioniert die Liste?</h2>
+            <p>Diese Liste speichert die Kaffee-Striche über die Woche und sortiert sie wie folgt: </p>
+            <ol>
+                <li>Die Person mit den meisten bezahlten Strichen</li>
+                <li>Die Person mit den meisten, noch unbezahlten, Strichen</li>
+            </ol>
+        </div>
+        <div class="explanation">
+            <h2><button>fragezeichen button</button>Wie trage ich mich in die Liste ein?</h2>
+            <ol>
+                <li>Gibt im Textfeld deinen Namen ein</li>
+                <li>Wähle zwischen den Buttons "1 Strich" oder "2 Striche" je nach dem wie viele Striche eingetragen werden müssen</li>
+                <li>Wenn du deine Striche bezahlt hast lege den Schieberegler um und Trage wieder deinen Namen ein</li>
+                <li>Dann kannst du jetzt neben dem Textfeld die Anzahl der bezahlten Striche eintragen</li>
+                <li>Die bezahlten Striche werden jetzt in der Tabelle in der Spalte "Bezahlt" neben der Anzahl deiner Striche angezeigt</li>
+            </ol>
+        </div>
+        <div class="name-counter">
+            <input type="text" id="name-input" placeholder="Dein Name">
+            <div class="button-group">
+                <button id="one-stroke-button">1 Strich</button>
+                <button id="two-stroke-button">2 Striche</button>
+            </div>
+            <div class="payment-section">
+                <label for="payment-toggle">Bezahlt:</label>
+                <input type="checkbox" id="payment-toggle">
+                <input type="number" id="paid-strokes-input" min="0" placeholder="Anzahl bezahlter Striche">
+        </div>
+        <div class="ranking-table">
+            <h2>Rangliste</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Striche</th>
+                        <th>Bezahlt</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body">
+                    <!-- Dynamisch generierte Rangliste -->
+                </tbody>
+            </table>
+    </body>
+</html>
