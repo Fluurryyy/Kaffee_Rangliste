@@ -27,8 +27,10 @@
                 <li>Dann kannst du jetzt neben dem Textfeld die Anzahl der bezahlten Striche eintragen</li>
                 <li>Die bezahlten Striche werden jetzt in der Tabelle in der Spalte "Bezahlt" neben der Anzahl deiner Striche angezeigt</li>
             </ol>
+            <p>Du brauchst Hilfe? <a href="#contact">Hier kriegst du sie!</a></p>
         </div>
-        <div class="name-counter">
+        <fieldset class="name-counter">
+            <legend>Eintragen der Striche</legend>
             <input type="text" id="name-input" placeholder="Dein Name">
             <div class="button-group">
                 <button id="one-stroke-button">1 Strich</button>
@@ -38,7 +40,7 @@
                 <label for="payment-toggle">Bezahlt:</label>
                 <input type="checkbox" id="payment-toggle">
                 <input type="number" id="paid-strokes-input" min="0" placeholder="Anzahl bezahlter Striche">
-        </div>
+        </fieldset>
         <div class="ranking-table">
             <h2>Rangliste</h2>
             <table>
@@ -54,14 +56,14 @@
                 </tbody>
             </table>
         </div>
-        <address>
+        <address id="contact">
             <h2>Fragen oder etwas funktioniert nicht?</h2>
             <h3>Melde dich bei:</h3>
             <p>
                 Florian Osterkamp<br />
                 EDV | IT-Department<br />
-                Phone: <a href="tel:028632005118"></a><br />
-                Mail: <a href="mailto:fosterkamp@trapo.de"></a><br />
+                Phone: <a href="tel:028632005118">0283 2005-118</a><br />
+                Mail: <a href="mailto:fosterkamp@trapo.de">fosterkamp@trapo.de</a><br />
             </p>
             <p>Anrufe bitte nur in dringenden Fällen!</p>
         </address>
