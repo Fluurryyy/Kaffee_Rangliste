@@ -4,22 +4,56 @@
         <meta charset="UTF-8">
         <title>Kaffee Rangliste</title>
         <meta name="description" content="Die Rangliste für die Kaffee Striche in der Verwaltung">
-        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
         <link rel="stylesheet" href="style.css">
         <link rel="script" href="script.js">
     </head>
     <body>
-        <h1>Kaffee Rangliste</h1>
-        <div class="introduction">
-            <h2><button>info button</button>Wie funktioniert die Liste?</h2>
-            <p>Diese Liste speichert die Kaffee-Striche über die Woche und sortiert sie wie folgt: </p>
-            <ol>
-                <li>Die Person mit den meisten bezahlten Strichen</li>
-                <li>Die Person mit den meisten, noch unbezahlten, Strichen</li>
+        <img class="trapo-logo" src="../assets/img/Trapo_Logo.png" alt="Trapo Logo">
+        <h1 id="title">Kaffee Rangliste</h1>
+        <!-- 
+            TODO:
+            - Animation beim Öffnen des Tooltips googlen und einbauen   
+        -->
+        <div class="tooltip-container">
+            <svg 
+            class="tooltip-svg" 
+            xmlns="http://www.w3.org/2000/svg" 
+            x="0px" 
+            y="0px" 
+            width="64" 
+            height="64" 
+            viewBox="0 0 64 64"
+            >
+                <path 
+                    d="M32,6C17.641,6,6,17.641,6,32c0,14.359,11.641,26,26,26s26-11.641,26-26C58,17.641,46.359,6,32,6z M32.021,16 C33.555,16,35,17.346,35,18.981C35,20.727,33.555,22,32.021,22C30.225,22,29,20.727,29,18.981C29,17.346,30.225,16,32.021,16z M39,47h-5h-4h-5v-3l5-1V30h-4v-3l8-1v17l5,1V47z"
+                ></path>
+            </svg><h2 class="tooltip-headline">Wie funktioniert die Liste?</h2>
+            <p id="list-explanation">Diese Liste speichert die Kaffee-Striche über die Woche und sortiert sie wie folgt: </p>
+            <ol id="list-explanation-list">
+                <li class="list-explanation-point">Die Person mit den meisten bezahlten Strichen</li>
+                <li class="list-explanation-point">Die Person mit den meisten, noch unbezahlten, Strichen</li>
             </ol>
         </div>
-        <div class="explanation">
-            <h2><button>fragezeichen button</button>Wie trage ich mich in die Liste ein?</h2>
+        <!-- 
+            TODO:
+            - Alles wie in der Erklärung oben, nur als Tooltip
+            - Verschiebungen finden und beheben
+            - Liste als Tooltip gestalten
+            - Animation beim Öffnen des Tooltips googlen und einbauen
+        -->
+        <div class="tooltip-container">
+            <svg 
+                class="tooltip-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 23 23"
+            >
+                <path
+                    d="M10 20a10 10 0 1 1 0-20a10 10 0 0 1 0 20zm2-13c0 .28-.21.8-.42 1L10 9.58c-.57.58-1 1.6-1 2.42v1h2v-1c0-.29.21-.8.42-1L13 9.42c.57-.58 1-1.6 1-2.42a4 4 0 1 0-8 0h2a2 2 0 1 1 4 0zm-3 8v2h2v-2H9z"
+                ></path>
+            </svg><h2 class="tooltip-headline">Wie trage ich mich in die Liste ein?</h2>
             <ol>
                 <li>Gibt im Textfeld deinen Namen ein</li>
                 <li>Wähle zwischen den Buttons "1 Strich" oder "2 Striche" je nach dem wie viele Striche eingetragen werden müssen</li>
@@ -29,6 +63,11 @@
             </ol>
             <p>Du brauchst Hilfe? <a href="#contact">Hier kriegst du sie!</a></p>
         </div>
+        <!-- 
+            TODO:
+            - Aus Fieldset ein Formular machen
+            - Buttons und Input Felder mit Labels versehen für bessere Zugänglichkeit    
+        -->
         <fieldset class="name-counter">
             <legend>Eintragen der Striche</legend>
             <input type="text" id="name-input" placeholder="Dein Name">
@@ -40,6 +79,7 @@
                 <label for="payment-toggle">Bezahlt:</label>
                 <input type="checkbox" id="payment-toggle">
                 <input type="number" id="paid-strokes-input" min="0" placeholder="Anzahl bezahlter Striche">
+            </div>
         </fieldset>
         <div class="ranking-table">
             <h2>Rangliste</h2>
