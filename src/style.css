@@ -4,11 +4,13 @@
 }
 
 body {
-    background-color: #C7C7C3;
+    background-image: url(../assets/img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h1, h2, p, ol, li {
-    font-family: 'IosevkaExtralightExtended';
+    font-family: 'GoogleSans', sans-serif;
     font-weight: normal;
     font-style: normal;
 }
@@ -25,26 +27,48 @@ h2 {
     margin-right: 10px;
     width: 200px;
     max-width: 200px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 #title {
+    display: block;
     text-align: center;
     font-weight: bold;
     font-size: 45px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 45px;
+    border-radius: 20px;
+    background-color: lightgray;
+    width: 300px;
 }
 
 .tooltip-container{
     display: inline-block;
     vertical-align: middle;
     width: 600px;
-    height: 300px;
+    height: 100%;
     background-color: #ED6B00;
     border-color: #121420;
     padding: 20px;
     border-radius: 50px;
     margin: 20px;
 }
+
+.question-container{
+    display: inline-block;
+    vertical-align: middle;
+    width: 600px;
+    height: 100%;
+    background-color: #ED6B00;
+    border-color: #121420;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 20px;
+}
+
 
 .tooltip-svg {
     display: inline-block;
@@ -63,7 +87,7 @@ h2 {
     font-size: 30px;
 }
 
-#list-explanation {
+.list-explanation {
     display: inline-block;
     vertical-align: middle;
     font-size: 17px;
@@ -81,4 +105,17 @@ h2 {
 .list-explanation-point {
     margin-top: 10px;
     margin-right: auto;
+}
+
+#help-link {
+    vertical-align: middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: lightgray;
+    border-radius: 20px;
+    width: 120px;
+    padding: 10px;
 }

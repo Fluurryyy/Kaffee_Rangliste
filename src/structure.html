@@ -29,7 +29,7 @@
                     d="M32,6C17.641,6,6,17.641,6,32c0,14.359,11.641,26,26,26s26-11.641,26-26C58,17.641,46.359,6,32,6z M32.021,16 C33.555,16,35,17.346,35,18.981C35,20.727,33.555,22,32.021,22C30.225,22,29,20.727,29,18.981C29,17.346,30.225,16,32.021,16z M39,47h-5h-4h-5v-3l5-1V30h-4v-3l8-1v17l5,1V47z"
                 ></path>
             </svg><h2 class="tooltip-headline">Wie funktioniert die Liste?</h2>
-            <p id="list-explanation">Diese Liste speichert die Kaffee-Striche über die Woche und sortiert sie wie folgt: </p>
+            <p class="list-explanation">Diese Liste speichert die Kaffee-Striche über die Woche und sortiert sie wie folgt: </p>
             <ol class="list-explanation-list">
                 <li class="list-explanation-point">Die Person mit den meisten bezahlten Strichen</li>
                 <li class="list-explanation-point">Die Person mit den meisten, noch unbezahlten, Strichen</li>
@@ -37,13 +37,11 @@
         </div>
         <!-- 
             TODO:
-            - Alles wie in der Erklärung oben, nur als Tooltip
-            - Verschiebungen finden und beheben
             - Eventuell Hintergrund nochmal anpassen (Farbe)
             - Liste als Tooltip gestalten
             - Animation beim Öffnen des Tooltips googlen und einbauen
         -->
-        <div class="tooltip-container">
+        <div class="question-container">
             <svg 
                 class="tooltip-svg"
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,14 +53,14 @@
                     d="M10 20a10 10 0 1 1 0-20a10 10 0 0 1 0 20zm2-13c0 .28-.21.8-.42 1L10 9.58c-.57.58-1 1.6-1 2.42v1h2v-1c0-.29.21-.8.42-1L13 9.42c.57-.58 1-1.6 1-2.42a4 4 0 1 0-8 0h2a2 2 0 1 1 4 0zm-3 8v2h2v-2H9z"
                 ></path>
             </svg><h2 class="tooltip-headline">Wie trage ich mich in die Liste ein?</h2>
-            <ol>
-                <li>Gibt im Textfeld deinen Namen ein</li>
-                <li>Wähle zwischen den Buttons "1 Strich" oder "2 Striche" je nach dem wie viele Striche eingetragen werden müssen</li>
-                <li>Wenn du deine Striche bezahlt hast lege den Schieberegler um und Trage wieder deinen Namen ein</li>
-                <li>Dann kannst du jetzt neben dem Textfeld die Anzahl der bezahlten Striche eintragen</li>
-                <li>Die bezahlten Striche werden jetzt in der Tabelle in der Spalte "Bezahlt" neben der Anzahl deiner Striche angezeigt</li>
+            <ol class="list-explanation-list">
+                <li class="list-explanation-point">Gibt im Textfeld deinen Namen ein</li>
+                <li class="list-explanation-point">Wähle zwischen den Buttons "1 Strich" oder "2 Striche" je nach dem wie viele Striche eingetragen werden müssen</li>
+                <li class="list-explanation-point">Wenn du deine Striche bezahlt hast lege den Schieberegler um und Trage wieder deinen Namen ein</li>
+                <li class="list-explanation-point">Dann kannst du jetzt neben dem Textfeld die Anzahl der bezahlten Striche eintragen</li>
+                <li class="list-explanation-point">Die bezahlten Striche werden jetzt in der Tabelle in der Spalte "Bezahlt" neben der Anzahl deiner Striche angezeigt</li>
             </ol>
-            <p>Du brauchst Hilfe? <a href="#contact">Hier kriegst du sie!</a></p>
+            <p id="help-link">Du brauchst Hilfe? <a href="#contact">Hier kriegst du sie!</a></p>
         </div>
         <!-- 
             TODO:
