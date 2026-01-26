@@ -27,7 +27,7 @@ h2 {
     margin-right: 10px;
     width: 200px;
     max-width: 200px;
-    background-color: white;
+    background-color: #fefae0;
     padding: 10px;
     border-radius: 20px;
 }
@@ -36,104 +36,90 @@ h2 {
     display: block;
     text-align: center;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 80px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 45px;
     border-radius: 20px;
-    background-color: lightgray;
-    width: 350px;
+    background-color: #fefae0;
+    width: 500px;
 }
 
-.information-container{
-    display: inline-block;
-    vertical-align: middle;
-    width: 600px;
-    height: 100%;
-    background: linear-gradient(135deg, #ED6B00 0%, #A9A9A9 100%);
-    border-color: #121420;
-    padding: 20px;
-    border-radius: 50px;
-    margin: 20px;
+.sidebar-wrapper {
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
 }
 
-.question-container{
-    display: inline-block;
-    vertical-align: middle;
-    width: 600px;
-    height: 100%;
-    background: linear-gradient(135deg, #ED6B00 0%, #A9A9A9 100%);
-    border-color: #121420;
-    padding: 20px;
-    border-radius: 50px;
-    margin: 20px;
+.info-wrapper {
+    top: 30%;
 }
 
-
-.tooltip-svg {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 64px;
-    max-height: 64px;
-    width: 64px;
+.question-wrapper {
+    top: 38%;
 }
 
-.tooltip-headline {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 25px;
-    text-decoration: underline;
-    margin-right: auto;
+.sidebar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #bc6c25;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
     font-size: 30px;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
 }
 
-.list-explanation {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 17px;
-    font-weight: bold;
-    margin-top: 25px;
-    margin-left: 20px;
+.question-wrapper .sidebar-btn {
+    background-color: #dda15e;
 }
 
-.list-explanation-list {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 50px;
+
+.sidebar-content {
+    background-color: #bc6c25;
+    padding: 10px 15px;
+    width: 200px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    /* Der Code für das Ausfahren */
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+    /* Text aus dem Bild schieben */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
 }
 
-.list-explanation-point {
-    margin-top: 10px;
-    margin-right: auto;
+.question-content {
+    background-color: #dda15e;
 }
 
-#help-link {
-    vertical-align: middle;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: lightgray;
-    border-radius: 20px;
-    width: 120px;
-    padding: 10px;
+.toggle-input{
+    display: none;
 }
 
-a:link {
-    color: black;
+.toggle-input:checked ~ .sidebar-content {
+    transform: translateX(40px);
 }
 
-a:visited {
-    text-decoration: underline;
-    color: black;
-}
 
-a:hover {
-    color: black;
-}
 
-a:active {
-    color: black;
-}
+
+
+
+
+
 
