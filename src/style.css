@@ -45,12 +45,12 @@ h2 {
     width: 350px;
 }
 
-.tooltip-container{
+.information-container{
     display: inline-block;
     vertical-align: middle;
     width: 600px;
     height: 100%;
-    background-color: #ED6B00;
+    background: linear-gradient(135deg, #ED6B00 0%, #A9A9A9 100%);
     border-color: #121420;
     padding: 20px;
     border-radius: 50px;
@@ -62,7 +62,7 @@ h2 {
     vertical-align: middle;
     width: 600px;
     height: 100%;
-    background-color: #ED6B00;
+    background: linear-gradient(135deg, #ED6B00 0%, #A9A9A9 100%);
     border-color: #121420;
     padding: 20px;
     border-radius: 50px;
@@ -136,3 +136,4 @@ a:hover {
 a:active {
     color: black;
 }
+
