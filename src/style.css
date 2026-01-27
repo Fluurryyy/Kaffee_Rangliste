@@ -1,13 +1,20 @@
+
+/* === Reset & Grundstruktur === */
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
     background-image: url(../assets/img/background.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
+
 footer {
     text-align: center;
     font-size: 12px;
@@ -20,6 +27,7 @@ footer {
     border-top: #bc6c25 solid 3px;
 }
 
+/* === Typografie === */
 h1, h2, p, ol, li {
     font-family: 'GoogleSans', sans-serif;
     font-weight: normal;
@@ -31,6 +39,7 @@ h2 {
     font-size: 25px;
 }
 
+/* === Sonstiges === */
 .trapo-logo {
     display: block;
     margin-left: auto;
@@ -61,153 +70,89 @@ h2 {
     max-height: 92px;
 }
 
-.sidebar-wrapper {
-    position: fixed;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-}
-
-.info-wrapper {
-    top: 25%;
-}
-
-.question-wrapper {
-    top: 33%;
-}
-
-.sidebar-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 55px;
-    background: linear-gradient(45deg, #bc6c25, #e09d5e, #bc6c25);
-    border: #dda15e solid 3px;
-    color: black;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    border-radius: 0 15px 15px 0;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 2;
-}
-
-.question-wrapper .sidebar-btn {
-    background: linear-gradient(45deg, #dda15e, #bc6c25, #dda15e);
-    border: #bc6c25 solid 3px;
-}
-
-
-.sidebar-content {
-    background: linear-gradient(45deg, #bc6c25, #e09d5e, #bc6c25);
-    padding: 10px 15px;
-    width: 300px;
-    border: #dda15e solid 5px;
-    border-radius: 15px;
-    font-family: sans-serif;
-    font-size: 14px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-
-    /* Der Code für das Ausfahren */
-    position: absolute;
-    left: 0;
-    z-index: 1;
-
-    /* Text aus dem Bild schieben */
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-.sidebar-headline {
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.sidebar-text {
-    margin-bottom: 10px;
-    text-align: justify;
-    line-height: 1.4;
-}
-
-.sidebar-subheadline {
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.sidebar-list {
-    margin-left: 20px;
-    margin-bottom: 10px;
-
-}
-
-.sidebar-list-point {
-    text-align: center;
-}
-
-.question-content {
-    background: linear-gradient(45deg, #dda15e, #bc6c25, #dda15e);
-    border: #bc6c25 solid 5px;
-}
-
-#help-link {
-    display: block;
-    text-align: center;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#help-link:hover {
-    text-decoration: underline;
-}
-
-#help-link:visited {
-    color: black;
-}
-
-#help-link:active {
-    color: white
-}
-
-#help-link-text {
-    color: black;
-    font-size: 15px;
-    text-align: center;
-}
-
-.toggle-input{
-    display: none;
-}
-
-.toggle-input:checked ~ .sidebar-content {
-    transform: translateX(40px);
-}
-
+/* === Haupt-Layout === */
 .counter-box {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
-    background-color: #dda15e;
+    background: linear-gradient(120deg, #d39b6a, #ebe5c0, #d39b6a, #d39b6a, #ebe5c0, #d39b6a);
     border: #bc6c25 solid 5px;
     border-radius: 20px;
-    align-items: center;
-    gap: 10px;
+    gap: 20px;
     width: 500px;
     height: auto;
     margin-bottom: 30px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);    
+    /* Zentrierung übernimmt jetzt der Body */
+}
+
+/* === Sektionen im Formular === */
+.name-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* === Eingabegruppen === */
+.input-group {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.input {
+    display: inline-block;
+    max-width: 190px;
+    height: 44px;
+    background-color: #bc6c25;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+/* Für alle anderen Browser */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Für Firefox */
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #97551c;
+}
+
+.input-group:hover .label, .input:focus {
+    color: black;
+}
+
+.label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
 }
 
 #name-input {
@@ -217,21 +162,79 @@ h2 {
     font-size: 16px;
 }
 
+#paid-strokes-input {
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2px;
+    font-size: 16px;
+}
+
+/* === Button-Gruppe === */
 .button-group {
     display: inline-block;
-    margin-top: 10px;
     gap: 5px;
+    margin-left: 6px;
+}
+
+.boton-elegante {
+    padding: 15px 30px;
+    border: 2px solid #97551c;
+    background-color: #bc6c25;
+    color: #05060f99;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.boton-elegante::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.boton-elegante:hover::after {
+    transform: scale(4);
+}
+
+.boton-elegante:hover {
+    border-color: #bc6c25;
+    background: #97551c;
+}
+
+/* === Toggle/Schalter === */
+.paid-toggle-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.paid-label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #05060f99;
 }
 
 /* The switch - the box around the slider */
 .switch {
     font-size: 13px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     margin-right: 10px;
     vertical-align: middle;
     position: relative;
-    display: inline-block;
+    display: flex;
     width: 3.5em;
     height: 2em;
 }
@@ -291,92 +294,178 @@ h2 {
     transform: translateX(-150%);
 }
 
-#paid-strokes-input {
-    vertical-align: middle;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 2px;
-    font-size: 16px;
+/* === Sidebar & Hilfselemente === */
+.sidebar-wrapper {
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
 }
 
-.input {
-    display: inline-block;
-    max-width: 190px;
-    height: 44px;
-    background-color: #bc6c25;
-    border-radius: .5rem;
-    padding: 0 1rem;
-    border: 2px solid transparent;
-    font-size: 1rem;
-    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+.info-wrapper {
+    top: 25%;
 }
 
-.label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: .3rem;
-    font-size: .9rem;
+.question-wrapper {
+    top: 33%;
+}
+
+.sidebar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 55px;
+    background: linear-gradient(45deg, #bc6c25, #e09d5e, #bc6c25);
+    border: #bc6c25 solid 3px;
+    color: black;
+    font-family: sans-serif;
     font-weight: bold;
-    color: #05060f99;
-    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+    font-size: 30px;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
 }
 
-.input:hover, .input:focus, .input-group:hover .input {
-    outline: none;
-    border-color: #97551c;
+.question-wrapper .sidebar-btn {
+    background: linear-gradient(45deg, #dda15e, #bc6c25, #dda15e);
 }
 
-.input-group:hover .label, .input:focus {
+.sidebar-content {
+    background: linear-gradient(45deg, #bc6c25, #e09d5e, #bc6c25);
+    padding: 10px 15px;
+    width: 300px;
+    border: #bc6c25 solid 5px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle-input{
+    display: none;
+}
+
+.toggle-input:checked ~ .sidebar-content {
+    transform: translateX(40px);
+}
+
+.sidebar-headline {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.sidebar-text {
+    margin-bottom: 10px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.sidebar-subheadline {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.sidebar-list {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar-list-point {
+    text-align: center;
+}
+
+.question-content {
+    background: linear-gradient(45deg, #dda15e, #bc6c25, #dda15e);
+    border: #bc6c25 solid 5px;
+}
+
+#help-link {
+    display: block;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#help-link:hover {
+    text-decoration: underline;
+}
+
+#help-link:visited {
     color: black;
 }
 
-.paid-label {
-    font-size: 16px;
+#help-link:active {
+    color: white;
+}
+
+#help-link-text {
+    color: black;
+    font-size: 15px;
+    text-align: center;
+}
+
+.paid-toggle-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* === Adress-Text im Footer === */
+#contact {
+    font-family: 'GoogleSans', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.adress-name, .adress-contact {
+    display: inline-block;
+    font-size: 14px;
+    background: linear-gradient(45deg, #bc6c25, #dda15e, #bc6c25);
+    border: #bc6c25 solid 3px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.adress-name {
+    margin-right: 20px;
+}
+
+.adress-text {
+
+    margin: 0;
+    line-height: 1.4;
+}
+
+.important-calls {
+    font-size: 12px;
     font-weight: bold;
-    vertical-align: middle;
-    margin-top: 7px;
-    margin-right: 10px;
-    color: #05060f99;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-
-.boton-elegante {
-    padding: 15px 30px;
-    border: 2px solid #97551c;
-    background-color: #bc6c25;
-    color: #05060f99;
-    font-size: 10px;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: all 0.4s ease;
-    outline: none;
-    position: relative;
-    overflow: hidden;
-    font-weight: bold;
-}
-
-.boton-elegante::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(0);
-    transition: transform 0.5s ease;
-}
-
-.boton-elegante:hover::after {
-    transform: scale(4);
-}
-
-.boton-elegante:hover {
-    border-color: #bc6c25;
-    background: #97551c;
-}
-
-
-
-
 
 
 

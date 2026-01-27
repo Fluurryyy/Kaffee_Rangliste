@@ -35,33 +35,31 @@
                 <p id="help-link-text">Du brauchst Hilfe oder es taucht ein Fehler auf:  <a id="help-link" href="#contact">Bitte hier melden!</a></p>
             </div>
         </div>
-        <!-- 
-            TODO:
-            - Bezahl-Status neben Namen Input legen
-            - Design des Formulars überarbeiten   
-        -->
         <form class="counter-box">
-            <div class="input-group">
-                <label class="label">Dein Name</label>
-                <input autocomplete="off" name="text" id="name-counter" class="input" type="email">
-            </div>
-            <div class="button-group">
-                <button class="boton-elegante">1 Strich</button>
-                <button class="boton-elegante">2 Striche</button>
+            <div class="name-section">
+                <div class="input-group">
+                    <label class="label">Dein Name</label>
+                    <input autocomplete="off" name="text" id="name-counter" class="input" type="text">
+                </div>
+                <div class="button-group">
+                        <button class="boton-elegante">1 Strich</button>
+                        <button class="boton-elegante">2 Striche</button>
+                </div>
             </div>
             <div class="payment-section">
                 <div class="input-group">
                     <label class="label">Deine bezahlten Striche</label>
                     <input autocomplete="off" name="text" id="text" class="input" type="number" min="0">
                 </div>
-                
-                <label for="paid-toggle" class="paid-label">Bezahlt?</label>
-                <label class="switch">
-                    <input id="paid-toggle" type="checkbox">
-                    <span class="slider"></span>
-                </label>
-                
+                <div class="paid-toggle-group">
+                    <label class="paid-label">Bezahlt?</label>
+                    <label class="switch">
+                        <input id="paid-toggle" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </div>
+            
         </form>
 
         <!-- Todo:
@@ -79,7 +77,7 @@
                         <th>Bezahlt</th>
                     </tr>
                 </thead>
-                <tbody id="ranking-body"> -->
+                <tbody id="ranking-body">
                     <!-- Dynamisch generierte Rangliste -->
                 </tbody>
             </table>
@@ -94,13 +92,19 @@
         -->
         <footer>
         <address id="contact">
-            <p>
-                Florian Osterkamp<br />
-                IT-Abteilung | IT-Department<br />
-                Phone: <a href="tel:028632005118">0283 2005-118</a><br />
-                Mail: <a href="mailto:fosterkamp@trapo.de">fosterkamp@trapo.de</a><br />
-            </p>
-            <p>Anrufe bitte nur in dringenden Fällen!</p>
+            <div class="adress-name">
+                <p class="adress-text">
+                    Florian Osterkamp<br />
+                    IT-Abteilung | IT-Department<br />
+                </p>
+            </div>
+            <div class="adress-contact">
+                <p class="adress-text">
+                    Phone: <a href="tel:028632005118">0283 2005-118</a><br />
+                    Mail: <a href="mailto:fosterkamp@trapo.de">fosterkamp@trapo.de</a><br />
+                </p>
+            </div>
+            <p class="important-calls">Anrufe bitte nur in dringenden Fällen!</p>
         </address>
     </footer>
     
