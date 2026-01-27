@@ -8,6 +8,17 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+footer {
+    text-align: center;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #bc6c25, #fefae0, #bc6c25, #fefae0);
+    border-top: #bc6c25 solid 3px;
+}
 
 h1, h2, p, ol, li {
     font-family: 'GoogleSans', sans-serif;
@@ -28,8 +39,9 @@ h2 {
     width: 200px;
     max-width: 200px;
     background-color: #fefae0;
-    padding: 10px;
+    border: #bc6c25 solid 5px;
     border-radius: 20px;
+    padding: 10px;
 }
 
 #title {
@@ -40,9 +52,13 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 45px;
+    background: linear-gradient(45deg, #dda15e, #fefae0, #dda15e);
+    border: #bc6c25 solid 5px;
     border-radius: 20px;
-    background-color: #fefae0;
     width: 500px;
+    height: 92px;
+    max-width: 500px;
+    max-height: 92px;
 }
 
 .sidebar-wrapper {
@@ -54,20 +70,21 @@ h2 {
 }
 
 .info-wrapper {
-    top: 30%;
+    top: 25%;
 }
 
 .question-wrapper {
-    top: 38%;
+    top: 33%;
 }
 
 .sidebar-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: #bc6c25;
+    width: 40px;
+    height: 55px;
+    background: linear-gradient(45deg, #bc6c25, #e09d5e, #bc6c25);
+    border: #dda15e solid 3px;
     color: black;
     font-family: sans-serif;
     font-weight: bold;
@@ -80,14 +97,16 @@ h2 {
 }
 
 .question-wrapper .sidebar-btn {
-    background-color: #dda15e;
+    background: linear-gradient(45deg, #dda15e, #bc6c25, #dda15e);
+    border: #bc6c25 solid 3px;
 }
 
 
 .sidebar-content {
-    background-color: #bc6c25;
+    background: linear-gradient(45deg, #bc6c25, #e09d5e, #bc6c25);
     padding: 10px 15px;
-    width: 200px;
+    width: 300px;
+    border: #dda15e solid 5px;
     border-radius: 15px;
     font-family: sans-serif;
     font-size: 14px;
@@ -103,8 +122,67 @@ h2 {
     transition: transform 0.3s ease-in-out;
 }
 
+.sidebar-headline {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.sidebar-text {
+    margin-bottom: 10px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.sidebar-subheadline {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.sidebar-list {
+    margin-left: 20px;
+    margin-bottom: 10px;
+
+}
+
+.sidebar-list-point {
+    text-align: center;
+}
+
 .question-content {
-    background-color: #dda15e;
+    background: linear-gradient(45deg, #dda15e, #bc6c25, #dda15e);
+    border: #bc6c25 solid 5px;
+}
+
+#help-link {
+    display: block;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#help-link:hover {
+    text-decoration: underline;
+}
+
+#help-link:visited {
+    color: black;
+}
+
+#help-link:active {
+    color: white
+}
+
+#help-link-text {
+    color: black;
+    font-size: 15px;
+    text-align: center;
 }
 
 .toggle-input{
@@ -114,6 +192,190 @@ h2 {
 .toggle-input:checked ~ .sidebar-content {
     transform: translateX(40px);
 }
+
+.counter-box {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    background-color: #dda15e;
+    border: #bc6c25 solid 5px;
+    border-radius: 20px;
+    align-items: center;
+    gap: 10px;
+    width: 500px;
+    height: auto;
+    margin-bottom: 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);    
+}
+
+#name-input {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 2px;
+    font-size: 16px;
+}
+
+.button-group {
+    display: inline-block;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    right: 0.3em;
+    bottom: 0.3em;
+    transform: translateX(150%);
+    background-color: #97551c;
+    border-radius: inherit;
+    transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.slider:after {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: #cccccc;
+    border-radius: inherit;
+    transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.switch input:focus + .slider {
+    box-shadow: 0 0 1px #59d102;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateY(0);
+}
+
+.switch input:checked + .slider::after {
+    transform: translateX(-150%);
+}
+
+#paid-strokes-input {
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2px;
+    font-size: 16px;
+}
+
+.input {
+    display: inline-block;
+    max-width: 190px;
+    height: 44px;
+    background-color: #bc6c25;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #97551c;
+}
+
+.input-group:hover .label, .input:focus {
+    color: black;
+}
+
+.paid-label {
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-top: 7px;
+    margin-right: 10px;
+    color: #05060f99;
+}
+
+.boton-elegante {
+    padding: 15px 30px;
+    border: 2px solid #97551c;
+    background-color: #bc6c25;
+    color: #05060f99;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.boton-elegante::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.boton-elegante:hover::after {
+    transform: scale(4);
+}
+
+.boton-elegante:hover {
+    border-color: #bc6c25;
+    background: #97551c;
+}
+
+
+
 
 
 

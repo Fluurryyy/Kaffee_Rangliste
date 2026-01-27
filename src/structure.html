@@ -4,64 +4,71 @@
         <meta charset="UTF-8">
         <title>Kaffee Liste</title>
         <meta name="description" content="Die Rangliste für die Kaffee Striche in der Verwaltung">
-        <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+        <link rel="icon" type="image/png" href="../assets/img/favicon.png">
         <link rel="stylesheet" href="style.css">
         <link rel="script" href="script.js">
     </head>
     <body>
         <img class="trapo-logo" src="../assets/img/Trapo_Logo.png" alt="Trapo Logo">
         <h1 id="title">Kaffee Liste</h1>
-        <!-- 
-            TODO:
-            - Design des Info-Buttons überarbeiten
-            - Inhalt des Info-Buttons überprüfen und ggf. anpassen
-            - Inhalt designen und überprüfen   
-        -->
         <div class="sidebar-wrapper info-wrapper">
             <input type="checkbox" id="toggle-info" class="toggle-input">
             <label for="toggle-info" class="sidebar-btn">i</label>
             <div class="sidebar-content">
                 <h2 class="sidebar-headline">Info</h2>
                 <p class="sidebar-text">
-                    Diese Seite dient zur Verwaltung der Kaffee Striche in der Verwaltung.<br> 
-                    Trage dich in die Liste ein, wenn du Kaffee Striche bekommen hast<br> 
+                    Diese Seite dient zum Festhalten und Prüfen der Kaffee-Striche an der Kaffeemaschine.<br>
+                    Trage dich in die Liste ein, wenn du Kaffee Striche bekommen hast
                     und halte die Liste aktuell, wenn du deine Striche bezahlt hast.
                 </p>
-                <h3 class="sidebar-subheadline">Sortiert wird wie folg:</h3>
+                <h3 class="sidebar-subheadline">Sortiert wird wie folgt:</h3>
                 <ol class="sidebar-list">
                     <li class="sidebar-list-point">Anzahl der bezahlten Striche</li>
                     <li class="sidebar-list-point">Anzahl der Striche</li>
-                    <li class="sidebar-list-point">Name (alphabetisch)</li>
                 </ol>
             </div>
         </div>
-        <!-- 
-            TODO:
-            - Design des Hilfe-Buttons überarbeiten
-        -->
         <div class="sidebar-wrapper question-wrapper">
             <input type="checkbox" id="toggle-question" class="toggle-input">
             <label for="toggle-question" class="sidebar-btn">?</label>
             <div class="sidebar-content question-content">
-                <p id="help-link">Du brauchst Hilfe? <a href="#contact">Hier kriegst du sie!</a></p>
+                <p id="help-link-text">Du brauchst Hilfe oder es taucht ein Fehler auf:  <a id="help-link" href="#contact">Bitte hier melden!</a></p>
             </div>
         </div>
         <!-- 
             TODO:
-            - Buttons und Input Felder mit Labels versehen für bessere Zugänglichkeit    
+            - Bezahl-Status neben Namen Input legen
+            - Design des Formulars überarbeiten   
         -->
-        <!-- <form class="name-counter">
-            <input type="text" id="name-input" placeholder="Dein Name">
+        <form class="counter-box">
+            <div class="input-group">
+                <label class="label">Dein Name</label>
+                <input autocomplete="off" name="text" id="name-counter" class="input" type="email">
+            </div>
             <div class="button-group">
-                <button id="one-stroke-button">1 Strich</button>
-                <button id="two-stroke-button">2 Striche</button>
+                <button class="boton-elegante">1 Strich</button>
+                <button class="boton-elegante">2 Striche</button>
             </div>
             <div class="payment-section">
-                <label for="payment-toggle">Bezahlt:</label>
-                <input type="checkbox" id="payment-toggle">
-                <input type="number" id="paid-strokes-input" min="0" placeholder="Anzahl bezahlter Striche">
+                <div class="input-group">
+                    <label class="label">Deine bezahlten Striche</label>
+                    <input autocomplete="off" name="text" id="text" class="input" type="number" min="0">
+                </div>
+                
+                <label for="paid-toggle" class="paid-label">Bezahlt?</label>
+                <label class="switch">
+                    <input id="paid-toggle" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                
             </div>
         </form>
+
+        <!-- Todo:
+            - Rangliste als Tabelle formatieren
+            - Design der Rangliste überarbeiten
+            - Dynamische Generierung der Rangliste
+        -->
         <div class="ranking-table">
             <h2>Rangliste</h2>
             <table>
@@ -74,12 +81,19 @@
                 </thead>
                 <tbody id="ranking-body"> -->
                     <!-- Dynamisch generierte Rangliste -->
-                <!-- </tbody>
+                </tbody>
             </table>
         </div>
+        <!-- Todo: 
+            - Design überarbeiten
+            - Kontaktinformationen anpassen
+            - Positionierung fixieren
+            - Schriftgröße anpassen
+            - Schriftart anpassen
+            - Schrift stylen 
+        -->
+        <footer>
         <address id="contact">
-            <h2>Fragen oder etwas funktioniert nicht?</h2>
-            <h3>Melde dich bei:</h3>
             <p>
                 Florian Osterkamp<br />
                 IT-Abteilung | IT-Department<br />
@@ -87,6 +101,8 @@
                 Mail: <a href="mailto:fosterkamp@trapo.de">fosterkamp@trapo.de</a><br />
             </p>
             <p>Anrufe bitte nur in dringenden Fällen!</p>
-        </address> -->
+        </address>
+    </footer>
+    
     </body>
 </html>
