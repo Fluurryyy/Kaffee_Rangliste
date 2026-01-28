@@ -304,11 +304,11 @@ input[type="number"] {
 }
 
 .info-wrapper {
-    top: 25%;
+    top: 250px;
 }
 
 .question-wrapper {
-    top: 33%;
+    top: 330px;
 }
 
 .sidebar-btn {
