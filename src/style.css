@@ -5,6 +5,12 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -12,16 +18,14 @@ body {
     min-height: 100vh;
     background-image: url(../assets/img/background.jpg);
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 footer {
-    text-align: center;
+    margin-top: 20px;
     font-size: 12px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    padding: 24px 0 12px 0;
+    text-align: center;
     width: 100%;
     background: linear-gradient(135deg, #bc6c25, #fefae0, #bc6c25, #fefae0);
     border-top: #bc6c25 solid 3px;
@@ -153,6 +157,11 @@ input[type="number"] {
     font-weight: bold;
     color: #05060f99;
     transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.names-option {
+    display: none;
+    color: #97551c;
 }
 
 #name-input {
@@ -427,7 +436,7 @@ input[type="number"] {
     margin-top: 10px;
 }
 
-/* === Adress-Text im Footer === */
+/* === Adress-Aussehen + Hilfen === */
 #contact {
     font-family: 'GoogleSans', sans-serif;
     font-size: 12px;
@@ -467,7 +476,90 @@ input[type="number"] {
     margin-bottom: 5px;
 }
 
+.address-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
 
+.address-link:hover {
+    text-decoration: underline;
+}
+
+.address-link:visited {
+    color: black;
+}
+
+.address-link:active {
+    color: white;
+}
+
+/* Tabellen-Container */
+.list-table {
+    margin: 40px auto 0 auto;
+    max-width: 600px;
+    background: linear-gradient(120deg, #d39b6a, #ebe5c0, #d39b6a, #d39b6a, #ebe5c0, #d39b6a);
+    border: #bc6c25 solid 5px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 24px 32px;
+    flex: 1 0 auto;
+}
+
+/* Tabellenüberschrift */
+.table-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    color: #6c4f2a;
+    letter-spacing: 1px;
+}
+
+/* Tabelle selbst */
+.table-box {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+    background: #fefae0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Tabellenkopf */
+.table-head th {
+    background: #bc6c25;
+    color: #fff;
+    padding: 12px 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #dda15e;
+}
+
+/* Tabellenzeilen */
+.table-box tr {
+    transition: background 0.2s;
+}
+
+.table-box tr:nth-child(even) {
+    background: #f5e9c6;
+}
+
+.table-box tr:hover {
+    background: #ffe6a7;
+}
+
+/* Tabellenzellen */
+.table-box td {
+    padding: 10px 8px;
+    text-align: center;
+    color: #6c4f2a;
+    border-bottom: 1px solid #e0cda5;
+}
+
+/* Letzte Zeile ohne Border */
+.table-box tr:last-child td {
+    border-bottom: none;
+}
 
 
 
